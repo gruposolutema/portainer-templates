@@ -108,6 +108,96 @@
           "name": "NETWORK"
         }
        ]
+    },
+    {
+      "id": 3,
+      "type": 3,
+      "title": "Redis",
+      "description": "Open-source in-memory data structure store",
+      "note": "Deploys a Redis server instance as an application cache or quick-response database.",
+      "categories": ["Database"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/redis/logo/logo.png",
+      "repository": {
+        "url": "https://github.com/gruposolutema/portainer-templates",
+        "stackfile": "stacks/redis/docker-compose.yml"
+      },
+      "env": [
+        {
+          "default": "code.grupogruposolutema.com/gruposolutema/redis",
+          "label": "Redis image",
+          "name": "REDIS_IMAGE"
+        },
+        {
+          "default": "7.4.0",
+          "label": "Redis tag",
+          "name": "REDIS_TAG"
+        },
+        {
+          "default": "6379",
+          "label": "Redis Port",
+          "name": "REDIS_PORT"
+        },
+        {
+          "default": "America/Santo_Domingo",
+          "label": "Timezone",
+          "name": "TIMEZONE"
+        },
+        {
+          "default": "true",
+          "label": "Enable Logfiles",
+          "name": "ENABLE_LOGS"
+        },
+        {
+          "default": "notice",
+          "label": "Log level",
+          "name": "LOG_LEVEL"
+        },
+        {
+          "label": "Redis Password",
+          "name": "REDIS_PASS"
+        },
+        {
+          "default": "redis/redisinsight",
+          "label": "Insight Image",
+          "name": "INSIGHT_IMAGE"
+        },
+        {
+          "default": "2.54.0",
+          "label": "Insight Tag",
+          "name": "INSIGHT_TAG"
+        },
+        {
+          "default": "5540",
+          "label": "Insight port",
+          "name": "INSIGHT_PORT"
+        },
+        {
+          "default": "info",
+          "label": "RI log level",
+          "name": "RI_LOG_LEVEL"
+        },
+        {
+          "default": "true",
+          "label": "RI files logger",
+          "name": "RI_FILES_LOGGER"
+        },
+        {
+          "default": "true",
+          "label": "RI stdout logger",
+          "name": "RI_STDOUT_LOGGER"
+        },
+        {
+          "default": "insight.example.com",
+          "label": "Insight domain",
+          "name": "INSIGHT_DOMAIN"
+        },
+        {
+          "default": "proxy",
+          "label": "Network name",
+          "name": "NETWORK"
+        }
+      ]
     }
   ]
 }
