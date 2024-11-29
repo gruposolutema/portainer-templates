@@ -69,6 +69,45 @@
           "name": "NETWORK"
         }
       ]
+    },
+    {
+      "id": 2,
+      "type": 3,
+      "title": "Gitea Act Runner",
+      "description": "Gitea Runner Setup",
+      "note": "Deploys a Gitea Act Runner.",
+      "categories": ["CI/CD"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitea-act-runner/logo/logo.png",
+      "repository": {
+        "url": "https://github.com/gruposolutema/portainer-templates",
+        "stackfile": "stacks/gitea-act-runner/docker-compose.yml"
+      },
+      "env": [
+        {
+          "default": "gitea/act_runner",
+          "label": "Gitea Act Runner Image",
+          "name": "GITEA_ACT_RUNNER_IMAGE"
+        },
+        {
+          "default": "0.2.11",
+          "label": "Gitea Act Runner Tag",
+          "name": "GITEA_ACT_RUNNER_TAG"
+        },
+        {
+          "label": "Gitea Instance URL",
+          "name": "GITEA_INSTANCE_URL"
+        },
+        {
+          "label": "Gitea Instance Registration Token",
+          "name": "GITEA_RUNNER_REGISTRATION_TOKEN"
+        },
+        {
+          "default": "proxy",
+          "label": "Network Name",
+          "name": "NETWORK"
+        }
+       ]
     }
   ]
 }
