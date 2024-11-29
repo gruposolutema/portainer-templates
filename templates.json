@@ -21,40 +21,40 @@
           "name": "MYSQL_IMAGE"
         },
         {
-          "default": "8",
-          "label": "MySQL Database tag",
+          "default": "9.1.0",
+          "label": "MySQL Database Tag",
           "name": "MYSQL_TAG"
         },
         {
           "default": "gitea_example",
-          "label": "MySQL database username",
+          "label": "MySQL Database Username",
           "name": "MYSQL_USER"
         },
         {
-          "label": "MySQL Database password for user",
+          "label": "MySQL Database Password for User",
           "name": "MYSQL_PASSWORD"
         },
         {
-          "label": "Database root password",
+          "label": "Database Root Password",
           "name": "MYSQL_ROOT_PASSWORD"
         },
         {
           "default": "gitea_example",
-          "label": "MySQL database name",
+          "label": "MySQL Database Name",
           "name": "MYSQL_DATABASE"
         },
         {
           "default": "gitea/gitea",
-          "label": "Gitea image",
+          "label": "Gitea Image",
           "name": "GITEA_IMAGE"
         },
         {
-          "default": "1.22.0",
+          "default": "1.22.4",
           "label": "Gitea tag",
           "name": "GITEA_TAG"
         },
         {
-          "default": "2222",
+          "default": "222",
           "label": "Gitea SSH Port",
           "name": "GITEA_SSH_PORT"
         },
@@ -65,7 +65,7 @@
         },
         {
           "default": "proxy",
-          "label": "Network name",
+          "label": "Network Name",
           "name": "NETWORK"
         }
       ]
