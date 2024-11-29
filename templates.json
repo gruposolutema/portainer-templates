@@ -8,9 +8,9 @@
       "note": "Deploys a android instance.",
       "categories": ["OS"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/android/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/android/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/android/docker-compose.yml"
       },
       "env": [
@@ -48,9 +48,9 @@
       "note": "Deploys a drone server instance.",
       "categories": ["CI/CD"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/drone/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/drone/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/drone/docker-compose.yml"
       },
       "env": [
@@ -110,9 +110,9 @@
       "note": "Deploys a Gitea instance connected to a MySQL database.",
       "categories": ["CMS"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gitea/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitea/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gitea/docker-compose.yml"
       },
       "env": [
@@ -178,9 +178,9 @@
       "note": "Deploys a Gitea act runner.",
       "categories": ["CI/CD"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gitea-act-runner/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitea-act-runner/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gitea-act-runner/docker-compose.yml"
       },
       "env": [
@@ -216,9 +216,9 @@
       "note": "Deploys a GitLab instance.",
       "categories": ["Code Server"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gitlab-ce/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitlab-ce/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gitlab-ce/docker-compose.yml"
       },
       "env": [
@@ -310,9 +310,9 @@
       "note": "Deploys a GitLab Runner instance.",
       "categories": ["Code Server"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gitlab-ce-runner/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitlab-ce-runner/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gitlab-ce-runner/docker-compose.yml"
       },
       "env": [
@@ -345,9 +345,9 @@
       "note": "Deploys a GitLab Runner instance to register a runner.",
       "categories": ["Code Server"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gitlab-ce-runner/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitlab-ce-runner/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gitlab-ce-runner-register/docker-compose.yml"
       },
       "env": [
@@ -394,14 +394,14 @@
       "note": "Deploys a GNU Health instance connected to a PostgreSQL database.",
       "categories": ["health"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gnuhealth/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gnuhealth/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gnuhealth/docker-compose.yml"
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/solutema/postgres",
+          "default": "code.grupogruposolutema.com/gruposolutema/postgres",
           "label": "Database image",
           "name": "POSTGRES_IMAGE"
         },
@@ -432,7 +432,7 @@
           "name": "SUPERUSER_PASS"
         },
         {
-          "default": "code.gruposolutema.com/solutema/gnuhealth",
+          "default": "code.grupogruposolutema.com/gruposolutema/gnuhealth",
           "label": "GNU Health image",
           "name": "GNUHEALTH_IMAGE"
         },
@@ -494,14 +494,14 @@
       "description": "Modern, Crazy Fast, Ridiculously Easy and Amazingly Powerful Flat-File CMS powered by PHP, Markdown, Twig, and Symfony.",
       "categories": ["CMS"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/grav/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/grav/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/grav/docker-compose.yml"
       },
       "env": [
         {
-          "default": "registry.gruposolutema.com/grav/docker-grav",
+          "default": "registry.grupogruposolutema.com/grav/docker-grav",
           "label": "Grav Image",
           "name": "GRAV_IMAGE"
         },
@@ -563,9 +563,9 @@
       "description": "Gravitee helps organizations manage and secure their entire API lifecycle with solutions for API design, management, security, productization, real-time observability, and more.",
       "categories": ["project-management"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/gravitee/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gravitee/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/gravitee/docker-compose.yml"
       },
       "env": [
@@ -624,14 +624,14 @@
       "note": "Deploys an nextcloud instance.",
       "categories": ["Cloud", "Productivity", "Tools", "Web"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/nextcloud/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/nextcloud/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/nextcloud/docker-compose.yml"
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/solutema/mariadb",
+          "default": "code.grupogruposolutema.com/gruposolutema/mariadb",
           "label": "MariaDB Image",
           "name": "MARIADB_IMAGE"
         },
@@ -661,7 +661,7 @@
           "name": "ROOT_PASS"
         },
         {
-          "default": "code.gruposolutema.com/solutema/nextcloud",
+          "default": "code.grupogruposolutema.com/gruposolutema/nextcloud",
           "label": "Nextcloud Image",
           "name": "NEXTCLOUD_IMAGE"
         },
@@ -696,9 +696,9 @@
       "description": "Open-source business apps.",
       "categories": ["project-management"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/odoo/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/odoo/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/odoo/docker-compose.yml"
       },
       "env": [
@@ -764,14 +764,14 @@
       "note": "Deploys an OpenLDAP Server.",
       "categories": ["Directory Access Protocol"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/openldap/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/openldap/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/openldap/docker-compose.yml"
       },
       "env": [   
         {
-          "default": "code.gruposolutema.com/solutema/openldap",
+          "default": "code.grupogruposolutema.com/gruposolutema/openldap",
           "label": "LDAP Image",
           "name": "LDAP_IMAGE"
         },
@@ -864,14 +864,14 @@
       "note": "Phorge is a community-maintained fork of Phabricator.",
       "categories": ["continuous-integration"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/phorge/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/phorge/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/phorge/docker-compose.yml"
       },
       "env": [
         {
-          "default": "registry.gruposolutema.com/docker-base-images/docker-mariadb",
+          "default": "registry.grupogruposolutema.com/docker-base-images/docker-mariadb",
           "label": "MariaDB image",
           "name": "MARIADB_IMAGE"
         },
@@ -885,7 +885,7 @@
           "name": "ROOT_PASS"
         },
         {
-          "default": "registry.gruposolutema.com/phorge/docker-phorge",
+          "default": "registry.grupogruposolutema.com/phorge/docker-phorge",
           "label": "Phorge image",
           "name": "PHORGE_IMAGE"
         },    
@@ -940,9 +940,9 @@
       "note": "Pi-hole is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
       "categories": ["Network-wide Ad Blocking"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/pi-hole/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/pi-hole/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/pi-hole/docker-compose.yml"
       },
       "env": [
@@ -995,14 +995,14 @@
       "note": "Deploys a Redis server instance as an application cache or quick-response database.",
       "categories": ["database"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/redis/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/redis/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/redis/docker-compose.yml"
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/solutema/redis",
+          "default": "code.grupogruposolutema.com/gruposolutema/redis",
           "label": "Redis image",
           "name": "REDIS_IMAGE"
         },
@@ -1084,9 +1084,9 @@
       "note": "Deploys an image to check your internet speed using Ookla's Speedtest service.",
       "categories": ["Tools"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/speedtest-tracker/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/speedtest-tracker/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/speedtest-tracker/docker-compose.yml"
       },
       "env": [
@@ -1212,9 +1212,9 @@
       "note": "Deploys a Tryton 6.0 instance connected to a PostgreSQL database.",
       "categories": ["erp"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/tryton60/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/tryton60/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/tryton60/docker-compose.yml"
       },
       "env": [
@@ -1253,7 +1253,7 @@
           "name": "TRYTON_CONTAINER_NAME"
         },
         {
-          "default": "registry.gruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
+          "default": "registry.grupogruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
           "label": "Tryton image",
           "name": "TRYTON_IMAGE"
         },
@@ -1293,14 +1293,14 @@
       "note": "Deploys a Tryton 7.0 instance connected to a PostgreSQL database.",
       "categories": ["erp"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/tryton70/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/tryton70/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/tryton70/docker-compose.yml"
       },
       "env": [
         {
-          "default": "registry.gruposolutema.com/docker-base-images/docker-postgres",
+          "default": "registry.grupogruposolutema.com/docker-base-images/docker-postgres",
           "label": "Database image",
           "name": "POSTGRES_IMAGE"
         },
@@ -1322,7 +1322,7 @@
           "name": "POSTGRES_PASSWORD"
         },
         {
-          "default": "registry.gruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
+          "default": "registry.grupogruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
           "label": "Tryton image",
           "name": "TRYTON_IMAGE"
         },
@@ -1367,14 +1367,14 @@
       "note": "Deploys a Tryton 7.2 instance connected to a PostgreSQL database.",
       "categories": ["erp"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/tryton72/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/tryton72/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/tryton72/docker-compose.yml"
       },
       "env": [
         {
-          "default": "registry.gruposolutema.com/docker-base-images/docker-postgres",
+          "default": "registry.grupogruposolutema.com/docker-base-images/docker-postgres",
           "label": "Database image",
           "name": "POSTGRES_IMAGE"
         },
@@ -1396,7 +1396,7 @@
           "name": "POSTGRES_PASSWORD"
         },
         {
-          "default": "registry.gruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
+          "default": "registry.grupogruposolutema.com/tryton/tryton-republica-dominicana/tryton-docker",
           "label": "Tryton image",
           "name": "TRYTON_IMAGE"
         },
@@ -1441,14 +1441,14 @@
       "note": "Deploys an Weblate instance.",
       "categories": ["Computer-assisted translation"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/weblate/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/weblate/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/weblate/docker-compose.yml"
       },
       "env": [
         {
-          "default": "registry.gruposolutema.com/docker-base-images/docker-postgres",
+          "default": "registry.grupogruposolutema.com/docker-base-images/docker-postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRES_IMAGE"
         },
@@ -1627,9 +1627,9 @@
       "note": "Deploys an windows os instance.",
       "categories": ["KVM"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/windows/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/windows/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/windows/docker-compose.yml"
       },
       "env": [
@@ -1727,9 +1727,9 @@
       "note": "Deploys a iireguard instance.",
       "categories": ["Network"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/wireguard/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/wireguard/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/wireguard/docker-compose.yml"
       },
       "env": [
@@ -1816,9 +1816,9 @@
       "note": "Deploys a WireHole instance.",
       "categories": ["Network"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/wirehole/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/wirehole/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/wirehole/docker-compose.yml"
       },
       "env": [
@@ -1923,14 +1923,14 @@
       "note": "Deploys a WordPress instance connected to a Mariadb database.",
       "categories": ["CMS"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/wordpress/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/wordpress/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/wordpress/docker-compose.yml"
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/solutema/mariadb",
+          "default": "code.grupogruposolutema.com/gruposolutema/mariadb",
           "label": "Database image",
           "name": "MARIADB_IMAGE"
         },
@@ -1989,7 +1989,7 @@
           "name": "ENABLE_HTTPS_REVERSE_PROXY"
         },                
         {
-          "default": "code.gruposolutema.com/solutema/wordpress",
+          "default": "code.grupogruposolutema.com/gruposolutema/wordpress",
           "label": "Wordpress image",
           "name": "WORDPRESS_IMAGE"
         },
@@ -2039,7 +2039,7 @@
           "name": "WP_CACHE"
         },
         {
-          "default": "redis-gruposolutema-server",
+          "default": "redis-grupogruposolutema-server",
           "label": "Wp redis host",
           "name": "WP_REDIS_HOST"
         },
@@ -2092,9 +2092,9 @@
       "note": "Deploys a Zabbix Server to monitor IT infrastructure such as networks, servers, virtual machines, and cloud services.",
       "categories": ["Monitor Tool"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/solutema/portainer-templates/main/stacks/zabbix/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/zabbix/logo/logo.png",
       "repository": {
-        "url": "https://github.com/solutema/portainer-templates",
+        "url": "https://github.com/gruposolutema/portainer-templates",
         "stackfile": "stacks/zabbix/docker-compose.yml"
       },
       "env": [
@@ -2104,7 +2104,7 @@
           "name": "TIMEZONE"
         },
         {
-          "default": "code.gruposolutema.com/solutema/postgres",
+          "default": "code.grupogruposolutema.com/gruposolutema/postgres",
           "label": "Postgres image",
           "name": "POSTGRES_IMAGE"
         },
@@ -2134,7 +2134,7 @@
           "name": "POSTGRES_DB"
         },
         {
-          "default": "code.gruposolutema.com/solutema/zabbix",
+          "default": "code.grupogruposolutema.com/gruposolutema/zabbix",
           "label": "Zabbix server image",
           "name": "ZABBIX_IMAGE"
         },
