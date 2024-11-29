@@ -6,7 +6,7 @@
       "type": 3,
       "title": "Gitea",
       "description": "Gitea setup with a MySQL database",
-      "categories": ["development", "project-management"],
+      "categories": ["Development", "Project-Management"],
       "note": "Deploys a Gitea instance connected to a MySQL database.",
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gitea/logo/logo.png",
