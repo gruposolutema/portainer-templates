@@ -129,7 +129,7 @@
           "name": "REDIS_IMAGE"
         },
         {
-          "default": "7.4.0",
+          "default": "7.4.1",
           "label": "Redis tag",
           "name": "REDIS_TAG"
         },
@@ -163,7 +163,7 @@
           "name": "INSIGHT_IMAGE"
         },
         {
-          "default": "2.54.0",
+          "default": "2.62.0",
           "label": "Insight Tag",
           "name": "INSIGHT_TAG"
         },
@@ -188,7 +188,7 @@
           "name": "RI_STDOUT_LOGGER"
         },
         {
-          "default": "insight.example.com",
+          "default": "redis.example.com",
           "label": "Insight domain",
           "name": "INSIGHT_DOMAIN"
         },
