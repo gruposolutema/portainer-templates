@@ -1,0 +1,25 @@
+services:
+  mariadb:
+    container_name: ${COMPOSE_PROJECT_NAME}-mariadb
+    image: ${MARIADB_IMAGE}:${MARIADB_TAG}
+    stop_grace_period: 3m
+    restart: unless-stopped
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - mariadb-logs:/logs
+    environment:
+      CONTAINER_NAME: ${COMPOSE_PROJECT_NAME}-mariadb
+      TIMEZONE: ${TIMEZONE}
+      ROOT_PASS: ${ROOT_PASS}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+
+volumes:
+  mariadb-data:
+  mariadb-logs:
+
+networks:
+  default:
+    name: ${NETWORK}
+    external: true

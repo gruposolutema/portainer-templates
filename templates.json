@@ -112,6 +112,66 @@
     {
       "id": 3,
       "type": 3,
+      "title": "MariaDB",
+      "description": "MariaDB Server is a high performing open source relational database, forked from MySQL.",
+      "note": "Deploys a MariaDB Server.",
+      "categories": ["Database"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/mariadb/logo/logo.png",
+      "repository": {
+        "url": "https://github.com/gruposolutema/portainer-templates",
+        "stackfile": "stacks/mariadb/docker-compose.yml"
+      },
+      "env": [
+        {
+          "default": "code.gruposolutema.com/gruposolutema/mariadb",
+          "label": "MariaDB Image",
+          "name": "MARIADB_IMAGE"
+        },
+        {
+          "default": "11.4.4",
+          "label": "MariaDB Tag",
+          "name": "MARIADB_TAG"
+        },
+        {
+          "default": "America/Santo_Domingo",
+          "label": "Timezone",
+          "name": "TIMEZONE"
+        },
+        {
+          "label": "Root Password",
+          "name": "ROOT_PASS"
+        },
+        {
+          "label": "Database Name",
+          "name": "DB_NAME"
+        },
+        {
+          "label": "Database Username",
+          "name": "DB_USER"
+        },
+        {
+          "label": "Database Password",
+          "name": "DB_PASS"
+        },
+        {
+          "default": "proxy",
+          "label": "Network Name",
+          "name": "NETWORK"
+        }
+       ],
+      "volumes": [
+        {
+          "container": "/var/lib/mysql"
+        },
+        {
+          "container": "/logs"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": 3,
       "title": "Redis",
       "description": "Open-source in-memory data structure store",
       "note": "Deploys a Redis server instance as an application cache or quick-response database.",
