@@ -208,12 +208,10 @@
           "name": "DB_NAME"
         },
         {
-          "default": "odoo2", 
           "label": "Super User",
           "name": "SUPERUSER_USER"
         },
         {
-          "default": "odoo2",
           "label": "Root Password",
           "name": "SUPERUSER_PASS"
         },
