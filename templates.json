@@ -208,6 +208,10 @@
           "name": "DB_NAME"
         },
         {
+          "label": "Root Password",
+          "name": "SUPERUSER_PASS"
+        },
+        {
           "default": "code.gruposolutema.com/gruposolutema/odoo",
           "label": "Odoo Image",
           "name": "ODOO_IMAGE"
