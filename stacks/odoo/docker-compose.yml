@@ -25,8 +25,8 @@ services:
     command: -- --dev=reload
     environment:
       HOST: ${COMPOSE_PROJECT_NAME}-postgres
-      USER: ${DB_USER}
-      PASSWORD: ${DB_PASS}
+      USER: ${SUPERUSER_USER}
+      PASSWORD: ${SUPERUSER_PASS}
       VIRTUAL_PORT: 8069
       VIRTUAL_HOST: ${URL},www.${URL}
       LETSENCRYPT_HOST: ${URL},www.${URL}
