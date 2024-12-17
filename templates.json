@@ -172,6 +172,63 @@
     {
       "id": 4,
       "type": 3,
+      "title": "PostgreSQL",
+      "description": "PostgreSQL: The World's Most Advanced Open Source Relational Database.",
+      "note": "Deploys a PostgreSQL Server.",
+      "categories": ["Database"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/postgres/logo/logo.png",
+      "repository": {
+        "url": "https://github.com/gruposolutema/portainer-templates",
+        "stackfile": "stacks/postgres/docker-compose.yml"
+      },
+      "env": [
+        {
+          "default": "code.gruposolutema.com/gruposolutema/postgres",
+          "label": "PostgreSQL Image",
+          "name": "POSTGRESQL_IMAGE"
+        },
+        {
+          "default": "16.6",
+          "label": "PostgreSQL Tag",
+          "name": "POSTGRESQL_TAG"
+        },
+        {
+          "default": "America/Santo_Domingo",
+          "label": "Timezone",
+          "name": "TIMEZONE"
+        },
+        {
+          "label": "Root Password",
+          "name": "SUPERUSER_PASS"
+        },
+        {
+          "label": "Database Name",
+          "name": "DB_NAME"
+        },
+        {
+          "label": "Database Username",
+          "name": "DB_USER"
+        },
+        {
+          "label": "Database Password",
+          "name": "DB_PASS"
+        },
+        {
+          "default": "proxy",
+          "label": "Network Name",
+          "name": "NETWORK"
+        }
+       ],
+      "volumes": [
+        {
+          "container": "/var/lib/postgresql/data"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": 3,
       "title": "Redis",
       "description": "Open-source in-memory data structure store",
       "note": "Deploys a Redis server instance as an application cache or quick-response database.",
