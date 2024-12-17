@@ -195,17 +195,17 @@
         {
           "default": "odoo",
           "label": "Database Username",
-          "name": "POSTGRES_USER"
+          "name": "DB_USER"
         },
         {
           "default": "odoo",
           "label": "Database Password for User",
-          "name": "POSTGRES_PASSWORD"
+          "name": "DB_PASS"
         },
         {
           "default": "postgres",
           "label": "Database Name",
-          "name": "POSTGRES_DB"
+          "name": "DB_NAME"
         },
         {
           "default": "code.gruposolutema.com/gruposolutema/odoo",
