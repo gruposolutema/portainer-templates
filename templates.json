@@ -193,7 +193,7 @@
           "name": "POSTGRES_TAG"
         },
         {
-          "default": "odoo",
+          "default": "postgres",
           "label": "Database Username",
           "name": "DB_USER"
         },
@@ -208,9 +208,20 @@
           "name": "DB_NAME"
         },
         {
+          "default": "odoo", 
+          "label": "Super User",
+          "name": "SUPERUSER_USER"
+        },
+        {
+          "default": "odoo",
           "label": "Root Password",
           "name": "SUPERUSER_PASS"
         },
+        {
+          "default": "unaccent", 
+          "label": "Database Extension",
+          "name": "DB_EXTENSION"
+        },        
         {
           "default": "code.gruposolutema.com/gruposolutema/odoo",
           "label": "Odoo Image",

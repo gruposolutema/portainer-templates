@@ -8,7 +8,9 @@ services:
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
       DB_NAME: ${DB_NAME}
+      SUPERUSER_USER: ${SUPERUSER_USER}
       SUPERUSER_PASS: ${SUPERUSER_PASS}
+      DB_EXTENSION: ${DB_EXTENSION}
     restart: unless-stopped
 
   odoo:
