@@ -193,7 +193,7 @@
           "name": "POSTGRES_TAG"
         },
         {
-          "default": "postgres",
+          "default": "odoo",
           "label": "Database Username",
           "name": "DB_USER"
         },
@@ -208,12 +208,12 @@
           "name": "DB_NAME"
         },
         {
-          "default": "odoo", 
+          "default": "odoo2", 
           "label": "Super User",
           "name": "SUPERUSER_USER"
         },
         {
-          "default": "odoo",
+          "default": "odoo2",
           "label": "Root Password",
           "name": "SUPERUSER_PASS"
         },
