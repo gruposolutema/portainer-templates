@@ -16,6 +16,7 @@ services:
   odoo:
     container_name: ${COMPOSE_PROJECT_NAME}-app
     image: ${ODOO_IMAGE}:${ODOO_TAG}
+    hostname: ${COMPOSE_PROJECT_NAME}-app
     restart: unless-stopped
     links:
       - postgres:postgres
