@@ -23,7 +23,12 @@ services:
     tty: true
     volumes:
       - extra-addons:/mnt/extra-addons
+      - backups:/mnt/backups
     command: -- --dev=reload
+    ports:
+      - "0:8069"  # Puerto aleatorio para 8069
+      - "0:8071"  # Puerto aleatorio para 8071
+      - "0:8072"  # Puerto aleatorio para 8072
     environment:
       HOST: ${COMPOSE_PROJECT_NAME}-postgres
       USER: ${SUPERUSER_USER}
@@ -35,6 +40,7 @@ services:
 volumes:
   postgres-data:
   extra-addons:
+  backups:
 
 networks:
   default:
