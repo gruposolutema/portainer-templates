@@ -247,6 +247,9 @@
         },
         {
           "container": "/mnt/extra-addons"
+        },
+        {
+          "container": "/mnt/backups"
         }
       ]
     },
