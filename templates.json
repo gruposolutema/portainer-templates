@@ -49,12 +49,12 @@
           "name": "GITEA_IMAGE"
         },
         {
-          "default": "1.22.4",
+          "default": "1.23.1",
           "label": "Gitea tag",
           "name": "GITEA_TAG"
         },
         {
-          "default": "222",
+          "default": "2222",
           "label": "Gitea SSH Port",
           "name": "GITEA_SSH_PORT"
         },
