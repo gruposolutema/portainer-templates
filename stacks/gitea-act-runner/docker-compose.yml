@@ -1,6 +1,7 @@
 version: "3"
 services:
   runner:
+    name: ${COMPOSE_PROJECT_NAME}-runner
     image: ${GITEA_ACT_RUNNER_IMAGE}:${GITEA_ACT_RUNNER_TAG}
     restart: always
     command: act_runner generate-config > /data/config.yaml
