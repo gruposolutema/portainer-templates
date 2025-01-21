@@ -1,18 +1,31 @@
 version: "3"
 services:
+  generate-config:
+    name: ${COMPOSE_PROJECT_NAME}-generate-config
+    image: ${GITEA_ACT_RUNNER_IMAGE}:${GITEA_ACT_RUNNER_TAG}
+    entrypoint: ["act_runner", "generate-config"]
+    command: []
+    volumes:
+      - config:/config
+    stdin_open: true
+    tty: true
+    
   runner:
     name: ${COMPOSE_PROJECT_NAME}-runner
     image: ${GITEA_ACT_RUNNER_IMAGE}:${GITEA_ACT_RUNNER_TAG}
     restart: always
     command: act_runner generate-config > /data/config.yaml
     environment:
+      CONFIG_FILE: /config/config.yaml
       GITEA_INSTANCE_URL: "${GITEA_INSTANCE_URL}"
       GITEA_RUNNER_REGISTRATION_TOKEN: "${GITEA_RUNNER_REGISTRATION_TOKEN}"
     volumes:
+      - config:/config
       - data:/data
       - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
+  config:
   data:
 
 networks:
