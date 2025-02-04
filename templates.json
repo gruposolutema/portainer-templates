@@ -112,6 +112,108 @@
     {
       "id": 3,
       "type": 3,
+      "title": "GNU Health",
+      "description": "GNU Health is a free/libre health and hospital information system.",
+      "note": "Deploys a GNU Health instance connected to a PostgreSQL database.",
+      "categories": ["health"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/gnuhealth/logo/logo.png",
+      "repository": {
+        "url": "https://github.com/gruposolutema/portainer-templates",
+        "stackfile": "stacks/gnuhealth/docker-compose.yml"
+      },
+      "env": [
+        {
+          "default": "code.rserverd.com/solutema/postgres",
+          "label": "Database image",
+          "name": "POSTGRES_IMAGE"
+        },
+        {
+          "default": "16.4",
+          "label": "Database tag",
+          "name": "POSTGRES_TAG"
+        },
+        {
+          "default": "America/Santo_Domingo",
+          "label": "Timezone",
+          "name": "TIMEZONE"
+        },
+        {
+          "label": "Database name",
+          "name": "DB_NAME"
+        },
+        {
+          "label": "Database username",
+          "name": "DB_USER"
+        },
+        {
+          "label": "Database password for user",
+          "name": "DB_PASS"
+        },
+        {
+          "label": "Database user root",
+          "name": "SUPERUSER_PASS"
+        },
+        {
+          "default": "code.rserverd.com/solutema/gnuhealth",
+          "label": "GNU Health image",
+          "name": "GNUHEALTH_IMAGE"
+        },
+        {
+          "default": "4.4",
+          "label": "GNU Health tag",
+          "name": "GNUHEALTH_TAG"
+        },
+        {
+          "default": "es_419",
+          "label": "GNU Health language",
+          "name": "GNUHEALTH_LANGUAGE"
+        },
+        {
+          "default": "jose.arturo.garcia@gmail.com",
+          "label": "Admin E-Mail",
+          "name": "EMAIL"
+        },
+        {
+          "default": "admin",
+          "label": "Admin Password",
+          "name": "PASSWORD"
+        },
+        {
+          "default": "mailhog/mailhog",
+          "label": "Mailhog image",
+          "name": "MAILHOG_IMAGE"
+        },
+        {
+          "default": "v1.0.1",
+          "label": "Mailhog tag",
+          "name": "MAILHOG_TAG"
+        },
+        {
+          "default": "1025",
+          "label": "Mailhog smtp port",
+          "name": "MAILHOG_SMTP_PORT"
+        },
+        {
+          "default": "8025",
+          "label": "Mailhog http port",
+          "name": "MAILHOG_HTTP_PORT"
+        },  
+        {
+          "default": "demo.domain.org.do",
+          "label": "URL",
+          "name": "URL"
+        },
+        {
+          "default": "proxy",
+          "label": "Network name",
+          "name": "NETWORK"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": 3,
       "title": "MariaDB",
       "description": "MariaDB Server is a high performing open source relational database, forked from MySQL.",
       "note": "Deploys a MariaDB Server.",
@@ -124,7 +226,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/mariadb",
+          "default": "code.gruposolutema.com/gruposolutema/mariadb",
           "label": "MariaDB Image",
           "name": "MARIADB_IMAGE"
         },
@@ -170,7 +272,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "type": 3,
       "title": "Odoo",
       "description": "Open-source business apps.",
@@ -183,7 +285,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/postgres",
+          "default": "code.gruposolutema.com/gruposolutema/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRES_IMAGE"
         },
@@ -221,7 +323,7 @@
           "name": "DB_EXTENSION"
         },        
         {
-          "default": "code.rserverd.com/gruposolutema/odoo",
+          "default": "code.gruposolutema.com/gruposolutema/odoo",
           "label": "Odoo Image",
           "name": "ODOO_IMAGE"
         },
@@ -254,7 +356,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "type": 3,
       "title": "PostgreSQL",
       "description": "PostgreSQL: The World's Most Advanced Open Source Relational Database.",
@@ -268,7 +370,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/postgres",
+          "default": "code.gruposolutema.com/gruposolutema/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRESQL_IMAGE"
         },
@@ -311,7 +413,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "type": 3,
       "title": "Redis",
       "description": "Open-source in-memory data structure store",
