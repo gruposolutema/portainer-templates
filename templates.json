@@ -180,26 +180,6 @@
           "name": "PASSWORD"
         },
         {
-          "default": "mailhog/mailhog",
-          "label": "Mailhog image",
-          "name": "MAILHOG_IMAGE"
-        },
-        {
-          "default": "v1.0.1",
-          "label": "Mailhog tag",
-          "name": "MAILHOG_TAG"
-        },
-        {
-          "default": "1025",
-          "label": "Mailhog smtp port",
-          "name": "MAILHOG_SMTP_PORT"
-        },
-        {
-          "default": "8025",
-          "label": "Mailhog http port",
-          "name": "MAILHOG_HTTP_PORT"
-        },  
-        {
           "default": "demo.domain.org.do",
           "label": "URL",
           "name": "URL"
