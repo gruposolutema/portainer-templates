@@ -9,7 +9,7 @@ services:
       DB_PASS: ${DB_PASS}
       SUPERUSER_PASS: ${SUPERUSER_PASS}
     volumes:
-      - db:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     restart: always
       
   gnuhealth:
@@ -23,7 +23,7 @@ services:
       VIRTUAL_HOST: ${URL},www.${URL}
       LETSENCRYPT_HOST: ${URL},www.${URL}
     volumes:
-      - data:/var/lib/trytond/db
+      - tryton-data:/var/lib/trytond/db
     command:
       - /bin/bash
       - -c
@@ -39,34 +39,23 @@ services:
   gnuhealth-cron:
     container_name: ${COMPOSE_PROJECT_NAME}-cron
     image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
-    command: trytond-cron -d ${DB_NAME}
+    #command: trytond-cron -d ${DB_NAME}
+    command:
+      - /bin/bash
+      - -c
+      - |
+        (until echo > /dev/tcp/tryton/8000; do sleep 0.5; done) 2>/dev/null
+        trytond-cron -d "${DB_NAME:-tryton}"
     volumes:
-      - data:/var/lib/trytond/db
+      - tryton-data:/var/lib/trytond/db
     depends_on:
       - postgres
+      - gnuhealth
     restart: always
-
-  gnuhealth-update:
-    container_name: ${COMPOSE_PROJECT_NAME}-update
-    image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
-    command: sh -c "trytond-admin -d ${DB_NAME} --all --email ${EMAIL} --password ${PASSWORD} ---activate-dependencies -v && tail -f /dev/null"
-    volumes:
-      - data:/var/lib/trytond/db
-    depends_on:
-      - postgres
-    restart: "no"
-
-  mailhog:
-    container_name: ${COMPOSE_PROJECT_NAME}-mailhog
-    image: ${MAILHOG_IMAGE}:${MAILHOG_TAG}
-    restart: always
-    ports:
-      - ${MAILHOG_SMTP_PORT}:1025
-      - ${MAILHOG_HTTP_PORT}:8025
 
 volumes:
-  db:
-  data:
+  postgres-data:
+  tryton-data:
 
 networks:
   default:
