@@ -15,7 +15,7 @@
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/gruposolutema/postgres",
+          "default": "code.rserverd.com/gruposolutema/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRES_IMAGE"
         },
@@ -53,7 +53,7 @@
           "name": "DB_EXTENSION"
         },        
         {
-          "default": "code.gruposolutema.com/gruposolutema/odoo",
+          "default": "code.rserverd.com/gruposolutema/odoo",
           "label": "Odoo Image",
           "name": "ODOO_IMAGE"
         },
@@ -100,7 +100,7 @@
       },
       "env": [
         {
-          "default": "code.gruposolutema.com/gruposolutema/postgres",
+          "default": "code.rserverd.com/gruposolutema/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRESQL_IMAGE"
         },
@@ -157,7 +157,7 @@
       },
       "env": [
         {
-          "default": "code.grupogruposolutema.com/gruposolutema/redis",
+          "default": "code.rserverd.com/gruposolutema/redis",
           "label": "Redis image",
           "name": "REDIS_IMAGE"
         },
