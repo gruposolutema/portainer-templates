@@ -23,7 +23,7 @@ services:
       VIRTUAL_HOST: ${URL},www.${URL}
       LETSENCRYPT_HOST: ${URL},www.${URL}
     volumes:
-      - data:/var/lib/trytond/db
+      - gnuhealth-data:/var/lib/trytond/db
     command:
       - /bin/bash
       - -c
@@ -39,11 +39,19 @@ services:
   gnuhealth-cron:
     container_name: ${COMPOSE_PROJECT_NAME}-cron
     image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
-    command: trytond-cron -d ${DB_NAME}
+    environment:
+      DB_PASSWORD: ${DB_PASS} 
     volumes:
-      - data:/var/lib/trytond/db
+      - gnuhealth-data:/var/lib/trytond/db
+    command:
+      - /bin/bash
+      - -c
+      - |
+        (until echo > /dev/tcp/tryton/8000; do sleep 0.5; done) 2>/dev/null
+        trytond-cron -d "${DB_NAME}"
     depends_on:
       - postgres
+      - gnuhealth
     restart: always
 
   gnuhealth-update:
