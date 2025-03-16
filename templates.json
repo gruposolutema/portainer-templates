@@ -124,7 +124,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/solutema/postgres",
+          "default": "code.rserverd.com/gruposolutema/postgres",
           "label": "Database image",
           "name": "POSTGRES_IMAGE"
         },
@@ -155,7 +155,7 @@
           "name": "SUPERUSER_PASS"
         },
         {
-          "default": "code.rserverd.com/solutema/gnuhealth",
+          "default": "code.rserverd.com/gruposolutema/gnuhealth",
           "label": "GNU Health image",
           "name": "GNUHEALTH_IMAGE"
         },
