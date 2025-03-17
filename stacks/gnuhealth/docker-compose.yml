@@ -1,6 +1,7 @@
 services:
   postgres:
     container_name: ${COMPOSE_PROJECT_NAME}-postgres
+    hostname: ${COMPOSE_PROJECT_NAME}-postgres
     image: ${POSTGRES_IMAGE}:${POSTGRES_TAG}
     environment:
       TIMEZONE: ${TIMEZONE}
@@ -19,6 +20,7 @@ services:
       
   gnuhealth:
     container_name: ${COMPOSE_PROJECT_NAME}-app
+    hostname: ${COMPOSE_PROJECT_NAME}-app
     image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
     environment:
       TZ: ${TIMEZONE}
@@ -65,7 +67,7 @@ services:
     image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
     command: sh -c "trytond-admin -d ${DB_NAME} --all --email ${EMAIL} --password ${PASSWORD} ---activate-dependencies -v && tail -f /dev/null"
     volumes:
-      - data:/var/lib/trytond/db
+      - gnuhealth-data:/var/lib/trytond/db
     depends_on:
       postgres:
         condition: service_healthy
