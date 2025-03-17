@@ -210,6 +210,14 @@
           "name": "NETWORK"
         }
       ]
+      "volumes": [
+        {
+          "container": "/var/lib/postgresql/data"
+        },
+        {
+          "container": "/var/lib/trytond/db"
+        }
+      ]
     },
     {
       "id": 4,
