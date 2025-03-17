@@ -151,7 +151,7 @@
           "name": "DB_PASS"
         },
         {
-          "label": "Database user root",
+          "label": "Database root password",
           "name": "SUPERUSER_PASS"
         },
         {
