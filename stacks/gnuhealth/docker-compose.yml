@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   postgres:
     container_name: ${COMPOSE_PROJECT_NAME}-postgres
@@ -9,11 +11,32 @@ services:
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
       SUPERUSER_PASS: ${SUPERUSER_PASS}
+      DB_EXTENSION: ${DB_EXTENSION}
     volumes:
       - postgres-data:/var/lib/postgresql/data
     restart: always
       
-  gnuhealth:
+  gnuhealth-admin:
+    container_name: ${COMPOSE_PROJECT_NAME}-admin
+    hostname: ${COMPOSE_PROJECT_NAME}-admin
+    image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
+    environment:
+      TZ: ${TIMEZONE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASS} 
+    command:
+      - /bin/bash
+      - -c
+      - |
+        (until echo > /dev/tcp/${COMPOSE_PROJECT_NAME}-postgres/5432; do sleep 0.5; done) 2>/dev/null
+        echo "${PASSWORD:-admin}" > /tmp/.passwd
+        TRYTONPASSFILE=/tmp/.passwd /entrypoint.sh trytond-admin -d "${DB_NAME:-tryton}" --all -l ${GNUHEALTH_LANGUAGE} --email "${EMAIL:-}" -vv
+        if command -v uwsgi &>/dev/null; then uwsgi --ini /etc/uwsgi.conf; else gunicorn --config=/etc/gunicorn.conf.py; fi
+    depends_on:
+      - postgres
+    restart: "no"
+
+  gnuhealth-app:
     container_name: ${COMPOSE_PROJECT_NAME}-app
     hostname: ${COMPOSE_PROJECT_NAME}-app
     image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
@@ -32,7 +55,7 @@ services:
       - |
         (until echo > /dev/tcp/${COMPOSE_PROJECT_NAME}-postgres/5432; do sleep 0.5; done) 2>/dev/null
         echo "${PASSWORD:-admin}" > /tmp/.passwd
-        TRYTONPASSFILE=/tmp/.passwd /entrypoint.sh trytond-admin -d "${DB_NAME:-tryton}" --all -l ${GNUHEALTH_LANGUAGE} --email "${EMAIL:-}" -vv
+        TRYTONPASSFILE=/tmp/.passwd /entrypoint.sh trytond -d "${DB_NAME:-tryton}" -vv
         if command -v uwsgi &>/dev/null; then uwsgi --ini /etc/uwsgi.conf; else gunicorn --config=/etc/gunicorn.conf.py; fi
     depends_on:
       - postgres
@@ -52,18 +75,9 @@ services:
         (until echo > /dev/tcp/${COMPOSE_PROJECT_NAME}-app/8000; do sleep 0.5; done) 2>/dev/null
         trytond-cron -d "${DB_NAME}"
     depends_on:
-      - gnuhealth
-    restart: always
-
-  gnuhealth-update:
-    container_name: ${COMPOSE_PROJECT_NAME}-update
-    image: ${GNUHEALTH_IMAGE}:${GNUHEALTH_TAG}
-    command: sh -c "trytond-admin -d ${DB_NAME} --all --email ${EMAIL} --password ${PASSWORD} --activate-dependencies -v && tail -f /dev/null"
-    volumes:
-      - gnuhealth-data:/var/lib/trytond/db
-    depends_on:
       - postgres
-    restart: "no"
+      - gnuhealth-app
+    restart: always
 
   mailhog:
     container_name: ${COMPOSE_PROJECT_NAME}-mailhog
