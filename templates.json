@@ -129,7 +129,7 @@
           "name": "POSTGRES_IMAGE"
         },
         {
-          "default": "16.4",
+          "default": "16.6",
           "label": "Database tag",
           "name": "POSTGRES_TAG"
         },
