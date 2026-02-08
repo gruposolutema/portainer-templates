@@ -15,7 +15,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/postgres",
+          "default": "code.rserverd.com/rserverd/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRES_IMAGE"
         },
@@ -53,12 +53,12 @@
           "name": "DB_EXTENSION"
         },        
         {
-          "default": "code.rserverd.com/gruposolutema/odoo",
+          "default": "code.rserverd.com/rserverd/odoo",
           "label": "Odoo Image",
           "name": "ODOO_IMAGE"
         },
         {
-          "default": "16.0-20241209",
+          "default": "16.0-20250909-jaglobal",
           "label": "Odoo Tag",
           "name": "ODOO_TAG"
         },
@@ -100,7 +100,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/postgres",
+          "default": "code.rserverd.com/rserverd/postgres",
           "label": "PostgreSQL Image",
           "name": "POSTGRESQL_IMAGE"
         },
@@ -157,7 +157,7 @@
       },
       "env": [
         {
-          "default": "code.rserverd.com/gruposolutema/redis",
+          "default": "code.rserverd.com/rserverd/redis",
           "label": "Redis image",
           "name": "REDIS_IMAGE"
         },
