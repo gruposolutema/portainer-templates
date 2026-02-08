@@ -23,6 +23,7 @@ services:
     tty: true
     volumes:
       - extra-addons:/mnt/extra-addons
+      - odoo-data:/var/lib/odoo
       - backups:/mnt/backups
     command: -- --dev=reload
     ports:
@@ -40,6 +41,7 @@ services:
 volumes:
   postgres-data:
   extra-addons:
+  odoo-data:
   backups:
 
 networks:
