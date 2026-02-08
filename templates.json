@@ -8,9 +8,10 @@
       "description": "Open-source business apps.",
       "categories": ["project-management"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/odoo/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/jaglobal/stacks/odoo/logo/logo.png",
       "repository": {
         "url": "https://github.com/gruposolutema/portainer-templates",
+        "reference": "jaglobal",
         "stackfile": "stacks/odoo/docker-compose.yml"
       },
       "env": [
@@ -93,9 +94,10 @@
       "note": "Deploys a PostgreSQL Server.",
       "categories": ["Database"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/postgres/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/jaglobal/stacks/postgres/logo/logo.png",
       "repository": {
         "url": "https://github.com/gruposolutema/portainer-templates",
+        "reference": "jaglobal",
         "stackfile": "stacks/postgres/docker-compose.yml"
       },
       "env": [
@@ -150,9 +152,10 @@
       "note": "Deploys a Redis server instance as an application cache or quick-response database.",
       "categories": ["Database"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/main/stacks/redis/logo/logo.png",
+      "logo": "https://raw.githubusercontent.com/gruposolutema/portainer-templates/jaglobal/stacks/redis/logo/logo.png",
       "repository": {
         "url": "https://github.com/gruposolutema/portainer-templates",
+        "reference": "jaglobal",
         "stackfile": "stacks/redis/docker-compose.yml"
       },
       "env": [
